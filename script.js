@@ -7,4 +7,10 @@ function reverseWords(str) {
     return str.split(' ').reverse().join(' ');
 }
 
-console.log(reverseWords('hello world'));
+function lovefunc(flower1, flower2) {
+    return flower1 % 2 !== flower2 % 2;
+}
+
+for (let i = 0; i <= 10; i++) {
+    console.log(`Число ${i} = ${i % 2}`);
+}
