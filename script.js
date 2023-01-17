@@ -14,3 +14,7 @@ function lovefunc(flower1, flower2) {
 for (let i = 0; i <= 10; i++) {
     console.log(`Число ${i} = ${i % 2}`);
 }
+
+function isTriangle(a, b, c) {
+    return a + b > c && a + c > b && c + b > a;
+}
