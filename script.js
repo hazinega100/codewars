@@ -44,27 +44,25 @@ function openOrSenior(data) {
     });
 
     return res;
+    // return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
 }
 
-console.log(openOrSenior([
-    [45, 12],
-    [55, 21],
-    [19, -2],
-    [104, 20]
-]));
+function accum(str) {
+    let res = [];
+    for (let i = 0; i < str.length; i++) {
+        let row = '';
+        for (let j = 0; j < i + 1; j++) {
+            row += j === 0 ? str[i].toUpperCase() : str[i].toLowerCase();
+        }
+        res.push(row);
+    }
+    return res.join('-');
+}
 
-// function openOrSenior(data) {
-//     let res = [];
+// console.log(accum("ZpglnRxqenU"));
 
-//     data.forEach(item => {
-//         item.forEach(i => {
-//             if (i[0] >= 55 && i[1] > 7) {
-//                 res.push("Senior");
-//             } else {
-//                 res.push("Open");
-//             }
-//         });
-//     });
+function check(a, x) {
+    return a.includes(x);
+}
 
-//     return res;
-// }
+// console.log(check([66, 101], 66));
