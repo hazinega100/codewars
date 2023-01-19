@@ -68,10 +68,24 @@ function check(a, x) {
 // console.log(check([66, 101], 66));
 
 function maps(x) {
-    return x.map(item => {
-        item * 2
+    let res = [];
+    x.map(item => {
+        res.push(item * 2);
     });
+    return res;
     // return x.map(n => n * 2);
 }
 
-console.log(maps([1, 2, 3]));
+// console.log(maps([1, 2, 3]));
+
+function disemvowel(str) {
+    return str.replace(/[aeiouy]/gi, '');
+}
+
+// console.log(disemvowel("This website is for losers LOL!"));
+
+function boolToWord(bool) {
+    return bool === true ? "Yes" : "No";
+}
+
+console.log(boolToWord(false));
