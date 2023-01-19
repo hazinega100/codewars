@@ -86,6 +86,13 @@ function disemvowel(str) {
 
 function boolToWord(bool) {
     return bool === true ? "Yes" : "No";
+    // return bool ? 'Yes':'No';
 }
 
-console.log(boolToWord(false));
+// console.log(boolToWord(false));
+
+function mango(quantity, price) {
+    return (quantity - Math.floor(quantity / 3)) * price;
+}
+
+// console.log(mango(9, 5));
