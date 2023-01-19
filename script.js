@@ -66,3 +66,12 @@ function check(a, x) {
 }
 
 // console.log(check([66, 101], 66));
+
+function maps(x) {
+    return x.map(item => {
+        item * 2
+    });
+    // return x.map(n => n * 2);
+}
+
+console.log(maps([1, 2, 3]));
