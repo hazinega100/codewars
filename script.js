@@ -96,3 +96,13 @@ function mango(quantity, price) {
 }
 
 // console.log(mango(9, 5));
+
+function digitize(n) {
+    const arrStr = String(n).split('').reverse();
+    return arrStr.map(num => {
+        return Number(num);
+    });
+    // return String(n).split('').map(Number).reverse()
+}
+
+// console.log(digitize(35231));
