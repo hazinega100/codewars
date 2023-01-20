@@ -106,3 +106,14 @@ function digitize(n) {
 }
 
 // console.log(digitize(35231));
+
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        return Math.min.apply(null, args);
+        // return Math.min(...args)
+    }
+}
+
+const smallInt = new SmallestIntegerFinder();
+
+// console.log(smallInt.findSmallestInt([78, 56, 232, 12, 8]));
