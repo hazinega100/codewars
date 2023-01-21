@@ -187,3 +187,27 @@ function filterList(arr) {
 }
 
 // console.log(filterList([1, 'a', 'b', 0, 15]));
+
+function validatePIN(pin) {
+    // return /^(\d{4}|\d{6})$/.test(pin)
+    if (pin.length == 4 || pin.length == 6) {
+
+        if (isNaN(pin) == true) {
+            return false;
+        } else if (pin < 0) {
+            return false;
+        } else if (pin.startsWith('+', '-', ' ', '.')) {
+            return false;
+        } else if (pin.includes('.', "'", "+", " ")) {
+            return false;
+        } else if (pin.endsWith('\n')) {
+            return false;
+        } else {
+            return true;
+        }
+    } else {
+        return false;
+    }
+}
+
+// console.log(validatePIN("12345"));
