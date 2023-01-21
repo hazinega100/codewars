@@ -177,9 +177,13 @@ function areYouPlayingBanjo(name) {
 
 function filterList(arr) {
     // return arr.filter(item => typeof item === "number");
-    return arr.filter(item => {
-        return typeof item === "string";
-    });
+    let res = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === "number") {
+            res.push(arr[i]);
+        }
+    }
+    return res;
 }
 
 // console.log(filterList([1, 'a', 'b', 0, 15]));
