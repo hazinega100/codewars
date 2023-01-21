@@ -117,3 +117,69 @@ class SmallestIntegerFinder {
 const smallInt = new SmallestIntegerFinder();
 
 // console.log(smallInt.findSmallestInt([78, 56, 232, 12, 8]));
+
+function getSum(a, b) {
+    return (Math.abs(a - b) + 1) * (a + b) / 2;
+}
+
+// console.log(getSum(5, -1));
+
+function rowSumOddNumbers(n) {
+    return n * n * n;
+    // return Math.pow(n, 3);
+}
+
+// console.log(rowSumOddNumbers(42));
+
+function simpleMultiplication(number) {
+    return number % 2 === 0 ? number * 8 : number * 9;
+}
+
+// console.log(simpleMultiplication(5));
+
+function reverseSeq(n) {
+    let res = [];
+    for (let i = 1; i <= n; i++) {
+        res.push(i);
+    }
+    return res.reverse();
+}
+
+// console.log(reverseSeq(5));
+
+const flip = (d, a) => {
+    function sortfunction(a, b) {
+        return a - b;
+    }
+
+    // let res;
+    if (d === 'R') {
+        return a.sort(sortfunction);
+    } else {
+        return a.sort(sortfunction).reverse();
+    }
+    // return res;
+};
+// const flip = (d, a) => a.sort((x, y) => d === 'R' ? x - y : y - x);
+
+// console.log(flip('R', [3, 2, 1, 2]));
+
+function areYouPlayingBanjo(name) {
+    if (name.slice(0, 1) === 'R' || name.slice(0, 1) === 'r') {
+        return `${name} plays banjo`;
+    } else {
+        return `${name} does not play banjo`;
+    }
+    // return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
+}
+
+// console.log(areYouPlayingBanjo('rdam'));
+
+function filterList(arr) {
+    // return arr.filter(item => typeof item === "number");
+    return arr.filter(item => {
+        return typeof item === "string";
+    });
+}
+
+// console.log(filterList([1, 'a', 'b', 0, 15]));
