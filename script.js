@@ -211,3 +211,96 @@ function validatePIN(pin) {
 }
 
 // console.log(validatePIN("12345"));
+
+function longest(s1, s2) {
+    return Array.from(new Set(s1 + s2)).sort().join('');
+}
+
+// console.log(longest("aretheyhere", "yestheyarehere"));
+
+function oddOrEven(array) {
+    let sum = 0;
+
+    array.map(arr => sum += arr);
+    return sum % 2 === 0 ? "even" : "odd";
+    // return array.reduce((a,b) => a+b,0) % 2 ? 'odd' : 'even';
+}
+
+// console.log(oddOrEven([0, 1, 5]));
+
+function minMax(arr) {
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+    return [min, max]; // fix me!
+    // return [Math.min(...arr), Math.max(...arr)];
+    // return [Math.min.apply(Math, arr), Math.max.apply(Math, arr)];
+}
+
+// console.log(minMax([2334454, 5]));
+
+var min = function (list) {
+    list.sort((a, b) => (a - b));
+    return list[0];
+    // return Math.min(...list);
+};
+
+var max = function (list) {
+    list.sort((a, b) => (b - a));
+    return list[0];
+    // return Math.max(...list);
+};
+
+function fakeBin(x) {
+    return x.split('').map(item => item < 5 ? item = 0 : item = 1).join('');
+    // return x.replace(/\d/g, d => d < 5 ? 0 : 1);
+}
+
+// console.log(fakeBin('45385593107843568'));
+
+function updateLight(current) {
+
+    if (current == "green") {
+        return "yellow";
+    } else if (current == "yellow") {
+        return "red";
+    } else {
+        return "green";
+    }
+    // return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
+}
+
+// console.log(updateLight("green"));
+
+function points(games) {
+    let total = 0;
+
+    games.map(item => {
+        if (item[0] < item[2]) {
+            total += 0;
+        }
+        if (item[0] == item[2]) {
+            total += 1;
+        }
+        if (item[0] > item[2]) {
+            total += 3;
+        }
+    });
+
+    return total;
+}
+
+// console.log(points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"]));
+
+function testLogicalOr(val) {
+    // Only change code below this line
+
+    if (val < 10 && val > 20) {
+        return "Outside";
+    } else {
+
+        // Only change code above this line
+        return "Inside";
+    }
+}
+
+testLogicalOr(15);
