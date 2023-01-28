@@ -460,3 +460,11 @@ function removeSmallest(numbers) {
 }
 
 // console.log(removeSmallest([1, 2, 3, 4, 5]));
+
+function abbrevName(name) {
+    // const arr = name.split(' ');
+    return name.split(' ').map(item => item[0].toUpperCase()).join('.');
+    // return name.match(/\b\w/g).join('.').toUpperCase();
+}
+
+// console.log(abbrevName("sam Harris"));
