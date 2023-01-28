@@ -343,3 +343,9 @@ function isIsogram(str) {
 }
 
 // console.log(isIsogram('moOse'));
+
+function grow(x) {
+    return x.reduce((num, i) => num * i);
+}
+
+console.log(grow([1, 2, 3]));
