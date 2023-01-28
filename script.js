@@ -359,3 +359,25 @@ function alphabetPosition(text) {
 }
 
 // console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+
+function removeChar(str) {
+    //You got this!
+    return str.slice(1, str.length - 1);
+}
+
+// console.log(removeChar('eloquent'));
+
+function towerBuilder(n) {
+    var space = "";
+    var star = "";
+    var result = [];
+    for (var i = 1; i <= n; i++) {
+        space = (" ").repeat(n - i);
+        star = ("*").repeat((2 * i) - 1);
+        result.push(space + star + space);
+    }
+    return result;
+    // return [...Array(n)].map((_,i)=>" ".repeat(n-1-i)+"*".repeat(i*2+1)+" ".repeat(n-1-i))
+}
+
+// console.log(towerBuilder(5));
