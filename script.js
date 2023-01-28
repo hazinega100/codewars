@@ -440,3 +440,23 @@ function DNAtoRNA(dna) {
 }
 
 // console.log(DNAtoRNA("TTTT"));
+
+function removeSmallest(numbers) {
+    if (numbers.length === 0) {
+        return [];
+    }
+    let min = numbers[0];
+    let minIndex = 0;
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] < min) {
+            min = numbers[i];
+            minIndex = i;
+        }
+    }
+    return [...numbers.slice(0, minIndex), ...numbers.slice(minIndex + 1)];
+
+    // let indexOfMin = numbers.indexOf(Math.min(...numbers));
+    // return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+}
+
+// console.log(removeSmallest([1, 2, 3, 4, 5]));
