@@ -346,6 +346,16 @@ function isIsogram(str) {
 
 function grow(x) {
     return x.reduce((num, i) => num * i);
+    // return eval(x.join("*"));
 }
 
-console.log(grow([1, 2, 3]));
+// console.log(grow([1, 2, 3]));
+
+function alphabetPosition(text) {
+    return text.toLowerCase().split('')
+        .filter(c => c >= 'a' & c <= 'z')
+        .map(c => c.charCodeAt(0) - 'a'.charCodeAt(0) + 1)
+        .join(' ');
+}
+
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."));
