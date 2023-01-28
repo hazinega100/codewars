@@ -432,3 +432,11 @@ function likes(names) {
 }
 
 // console.log(likes(['Peter']));
+
+function DNAtoRNA(dna) {
+    return dna.split('').map(item => item === "T" ? item = "U" : item = item).join('');
+    // return dna.split("T").join("U");
+    // return dna.replace(/T/g, 'U');
+}
+
+// console.log(DNAtoRNA("TTTT"));
